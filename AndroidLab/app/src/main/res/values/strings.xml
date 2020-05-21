@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidLab</string>
+    <string name="action_go_to">Інша активніть</string>
+    <string name="action_info">Додаткова нформація</string>
+    <string name="information">Собко А. Г., ІПЗ-17-1</string>
+    <string name="action_change_color">Зміна коліру</string>
+    <string name="tost_with_picture">Toast з малюнком</string>
+</resources>
