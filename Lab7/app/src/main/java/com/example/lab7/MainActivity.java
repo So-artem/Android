@@ -12,12 +12,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView resultField; // текстовое поле для вывода результата
+    TextView resultField; // текстове поле для виводу інф
     EditText numberField;   // поле для ввода числа
-    TextView operationField;    // текстовое поле для вывода знака операции
-    Double operand = null;  // операнд операции
-    String lastOperation = "="; // последняя операция
-    String memory = "";
+    TextView operationField;    // текстовое поле для виводу знака
+    Double operand = null;  // операція
+    String lastOperation = "="; // остання операція
+    String memory = ""; //память
 
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         operationField = (TextView) findViewById(R.id.operationField);
     }
 
-    // сохранение состояния
+    // збереження стану
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString("OPERATION", lastOperation);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void onCClick(View view){
         numberField.setText("");
     }
-    // обработка нажатия на числовую кнопку
+    // обробка кліку на число
     public void onNumberClick(View view){
 
         Button button = (Button)view;
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             operand = null;
         }
     }
-    // обработка нажатия на кнопку операции
+    // обробка кліку на операцію
     public void onOperationClick(View view){
 
         Button button = (Button)view;
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void performOperation(Double number, String operation) {
-        // если операнд ранее не был установлен (при вводе самой первой операции)
+        // якщо це перша операція
         if(operand ==null){
             operand = number;
         }
